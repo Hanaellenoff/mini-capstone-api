@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
     render :show
   end 
   def all_products
-    @products = Products.all
+    @product = Product.all
     render :index
   end 
 end
