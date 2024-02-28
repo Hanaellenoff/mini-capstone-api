@@ -3,8 +3,8 @@ class ProductsController < ApplicationController
     @product = Product.find_by(id: params[:id])
     render :show
   end 
-  def all_products
-    @products = Product.all
+  def index
+    @products = Product.find_by(id: params[:id])
     render :index
   end 
 end
