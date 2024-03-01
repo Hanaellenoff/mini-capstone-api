@@ -5,16 +5,12 @@ class ProductTest < ActiveSupport::TestCase
   #   assert true
   # end
   def is_discounted?
-   if product.price <= 10 
-      puts true
-   else
-      puts false
-   end 
+   price <= 10 
   end   
   def tax
-    return product.price * 0.09
+   tax = product.price * 0.09
   end 
   def total
-    return product.price + product.tax
+    return tax + price
   end 
 end
