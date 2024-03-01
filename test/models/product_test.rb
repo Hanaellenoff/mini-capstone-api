@@ -8,7 +8,7 @@ class ProductTest < ActiveSupport::TestCase
    price <= 10 
   end   
   def tax
-   tax = product.price * 0.09
+   tax = price * 0.09
   end 
   def total
     return tax + price
