@@ -12,6 +12,9 @@ class ProductTest < ActiveSupport::TestCase
    end 
   end   
   def tax
-    
-
+    return product.price * 0.09
+  end 
+  def total
+    return product.price + product.tax
+  end 
 end
