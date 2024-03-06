@@ -15,7 +15,8 @@ class ProductsController < ApplicationController
     @product = Product.create(
     name: params["name"],
     price: params["price"],
-    description: params["description"]
+    description: params["description"],
+    supplier_id: params["supplier_id"]
     )
     if @product.valid? 
       render :show #happy path

@@ -23,6 +23,6 @@ class Product < ApplicationRecord
   # def images 
   #  images = Image.where(product_id: id)
   #   belongs_to :product
-  end 
+  # end 
 
 end
