@@ -18,7 +18,12 @@ class ProductsController < ApplicationController
     image_url: params["image_url"],
     description: params["description"]
     )
-    render :show
+    if @product.valid? 
+      render :show #happy path
+    else 
+      render json: {errors: @product.errors.full_messages},  
+      status: 422  #sad path
+    end 
   end 
   def update
     @product = Product.find_by(id: params[:id])
@@ -28,7 +33,12 @@ class ProductsController < ApplicationController
     image_url: params["image_url"] || @product.image_url,
     description: params["description"] || @product.description
     )
-    render :show
+    if @product.valid? 
+      render :show #happy path
+    else 
+      render json: {errors: @product.errors.full_messages},  
+      status: 422  #sad path
+    end 
   end 
   def destroy 
     @product = Product.find_by(id: params[:id])

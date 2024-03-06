@@ -6,4 +6,4 @@ json.tax product.tax
 json.total product.total 
 json.image_url product.image_url 
 json.description product.description
-
+json.supplier_id product.supplier_id

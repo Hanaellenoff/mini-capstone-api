@@ -12,4 +12,5 @@ class Product < ApplicationRecord
   validates :name, :presence => true
   validates :price, numericality: { only_integer: true }
   validates :image_url, :presence => true 
+  validates :description, length: {minimum: 20} 
 end
