@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   delete "/suppliers/:id" => "suppliers#destroy"
   # Defines the root path route ("/")
   # root "posts#index"
+  post "/users" => "users#create"
+  post "/sessions" => "sessions#create"
 end
