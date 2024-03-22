@@ -1,12 +1,12 @@
 class OrdersController < ApplicationController
  
   def index
-    @orders = Order.all
+    @orders =  current_user.orders.all
     render :index
   end 
 
   def show
-    @order = Order.find_by(id: params[:id])
+    @order = current_user.orders.find_by(id: params[:id])
     render :show
   end 
 
@@ -15,9 +15,9 @@ class OrdersController < ApplicationController
       user_id: current_user.id,
       product_id: params["product_id"],
       quantity: params["quantity"],
-      subtotal: params["subtotal"],
-      tax: params["tax"],
-      total: params["total"]
+      # subtotal: params["subtotal"],
+      # tax: params["tax"],
+      # total: params["total"]
     )
     if @order.save
       render :show
