@@ -27,3 +27,16 @@ class Product < ApplicationRecord
   # end 
 
 end
+
+# allow users to purchase products
+
+# we need to give products a product id
+#create a new column migration to add it make sure its a number 
+
+# we need to create an order 
+# inputting product_id, price, etc.
+
+# connect product table to orders table 
+
+# make something that will take the product away once ordered 
+# 
