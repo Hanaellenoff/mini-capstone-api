@@ -20,6 +20,7 @@ class Product < ApplicationRecord
   # end 
   belongs_to :supplier
   has_many :images
+  has_many :orders
   # def images 
   #  images = Image.where(product_id: id)
   #   belongs_to :product
