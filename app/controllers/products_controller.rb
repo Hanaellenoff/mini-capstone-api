@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_admin
   def one_product
     @product = Product.find_by(id: params[:id])
     render :show
