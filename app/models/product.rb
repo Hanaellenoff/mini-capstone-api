@@ -21,7 +21,8 @@ class Product < ApplicationRecord
   belongs_to :supplier
   has_many :images
   has_many :orders
-  has_many :categories
+  has_many :category_products
+  has_many :categories, through: :category_products 
   # def images 
   #  images = Image.where(product_id: id)
   #   belongs_to :product
